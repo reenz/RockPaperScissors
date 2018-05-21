@@ -1,8 +1,11 @@
 ﻿using System;
 
-namespace RockPaperScissors
+namespace Game.Lib
 {
-    public class Class1
+    public class Game
     {
+        public string Play() {
+            return "Rock";
+        }
     }
 }

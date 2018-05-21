@@ -1,18 +1,18 @@
+using System;
 using NUnit.Framework;
+using Game.Lib;
 
-namespace Tests
+namespace Game.Lib.Tests
 {
-    public class Tests
+    public class GameTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
 
         [Test]
-        public void Test1()
-        {
-            Assert.Pass();
+        public void ShouldReturnMove()
+        {   
+            var game = new Game();
+            var result = game.Play();
+            Assert.AreEqual(result, "Rock");
         }
     }
 }
