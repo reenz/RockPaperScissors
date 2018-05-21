@@ -25,6 +25,7 @@ choice ​ , ​ e.g. if it played Scissors in game 2, it should play Rock in ga
 * Next was to decide what classes I need, so extracted verbs and nouns from game rules and requirements and made a rough sequence diagram to understand the flow of information between classes, encapsulate similar behaviors and not to assign more than one responsibility to one class.
 * Then I had to decide between NUnit and MSTest as these libraries were recommended by Spektrix. While researching about them, I found another testing library XUnit that was the latest and powerful testing library, but chose NUnit because it was recommended by them and it runs much faster as compared to MSTest.
 * To complete this task I will make one test project, one class lib project and one console app project.
+* To gain familarity with testing in C# first I wrote very basic test that will just check if "Rock" is returned.
 
 ### Extensions
 
