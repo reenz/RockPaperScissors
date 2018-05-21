@@ -19,6 +19,12 @@ random for each turn
 * Tactical Computer Player - The tactical computer player should always select the ​ choice that would have beaten its last
 choice ​ , ​ e.g. if it played Scissors in game 2, it should play Rock in game 3.
 
+### Approach
+
+* As I am new to C# I first read C# docs to understand the basics of it and then created simple 'Hello World' project to understand how C# works.
+* Next was to decide what classes I need, so extracted verbs and nouns from game rules and requirements and made a rough sequence diagram to understand the flow of information between classes, encapsulate similar behaviors and not to assign more than one responsibility to one class.
+* Then I had to decide between NUnit and MSTest as these libraries were recommended by Spektrix. While researching about them, I found another testing library XUnit that was the latest and powerful testing library, but chose NUnit because it was recommended by them and it runs much faster as compared to MSTest.
+
 ### Extensions
 
 The following are some of the possible extensions that may be made to the application at a
