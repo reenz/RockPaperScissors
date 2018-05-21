@@ -13,13 +13,10 @@ winner is determined based on the following rules:
 ### Requirements
 
 Your application ​ must​ support three types of player:
-* Human Player
-The user must be prompted for a selection of Rock, Paper or Scissors for each turn
-* Random Computer Player
-The random computer player should automatically select one of Rock, Paper or Scissors at
+* Human Player - The user must be prompted for a selection of Rock, Paper or Scissors for each turn
+* Random Computer Player - The random computer player should automatically select one of Rock, Paper or Scissors at
 random for each turn
-* Tactical Computer Player
-The tactical computer player should always select the ​ choice that would have beaten its last
+* Tactical Computer Player - The tactical computer player should always select the ​ choice that would have beaten its last
 choice ​ , ​ e.g. if it played Scissors in game 2, it should play Rock in game 3.
 
 ### Extensions
@@ -32,4 +29,4 @@ We may want to add new computer player implementations as tactics improve
 * Longer matches
 We may want to change the match format to “best of 5” at a later date
 * New “moves”
-We may expand the p
+We may expand the possible moves that each player can make (e.g.​ ​ Rock, Paper, Scissors, Lizard, Spock​ )
