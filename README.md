@@ -26,6 +26,7 @@ choice ​ , ​ e.g. if it played Scissors in game 2, it should play Rock in ga
 * Then I had to decide between NUnit and MSTest as these libraries were recommended by Spektrix. While researching about them, I found another testing library XUnit that was the latest and powerful testing library, but chose NUnit because it was recommended by them and it runs much faster as compared to MSTest.
 * To complete this task I will make one test project, one class lib project and one console app project.
 * To gain familarity with testing in C# first I wrote very basic test that will just check if "Rock" is returned.
+* Console app will be responsible for interaction from the commandline and Classlib app will have the logic of the game.
 
 ### Extensions
 
