@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace RPS.Lib
 {
@@ -13,7 +14,10 @@ namespace RPS.Lib
 
         public Weapon Move()
         {
-            return Weapon.ROCK;
+            var enumValues = Enum.GetValues(typeof(Weapon));
+            var idx = new Random().Next(enumValues.Length);
+            var weapon = enumValues.GetValue(idx);
+            return (Weapon)weapon;
         }
 
         public string Name()

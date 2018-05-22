@@ -27,7 +27,8 @@ namespace RPS.App
             var playerTwo = GetPlayer();
             var game = new Game(playerOne, playerTwo, BEST_OF);
             var outcome = game.Play();
-            ui.ShowToUser("Thank you for playing RPS\n");
+            ui.ShowToUser(outcome.Winner());
+            ui.ShowToUser("\nThank you for playing RPS\n");
 
         }
 
