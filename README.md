@@ -29,6 +29,9 @@ choice ​ , ​ e.g. if it played Scissors in game 2, it should play Rock in ga
 * Console app will be responsible for interaction from the commandline and Classlib app will have the logic of the game.
 * To mock the console app for testing I used `Moq`. While mocking the ConsoleApp I discovered that I cannot mock non-virtual methods and sealed classes, this [stackoverflow](https://stackoverflow.com/questions/21768767/why-am-i-getting-an-exception-with-the-message-invalid-setup-on-a-non-virtual) post helped me get out of this situation. Then I made IUserInterface in classLib app which is extended in console app to test console app. By making IUserInterface in classLib app will give me the flexibility of adding other types of user interfaces.
 
+### Console Screenshot
+![RPS](./Images/RPS.png)
+
 ### Areas for development
 
 * If I had more time I would have added tactical computer player class to always select the ​ choice that would have beaten its last.
