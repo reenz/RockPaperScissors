@@ -4,6 +4,7 @@ using Game.Lib;
 
 namespace Game.Lib.Tests
 {
+    [TestFixture]
     public class GameTests
     {
 
