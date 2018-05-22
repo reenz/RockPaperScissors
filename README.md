@@ -31,6 +31,10 @@ choice ​ , ​ e.g. if it played Scissors in game 2, it should play Rock in ga
 
 ### Areas for development
 
+* If I had more time I would have added tactical computer player class to always select the ​ choice that would have beaten its last.
+* Properly mocking the player class in GameTest
+* Mock the human input from console and random move of computer player to test the Human and computer Player classes fully.
+
 ### Extensions
 
 The following are some of the possible extensions that may be made to the application at a

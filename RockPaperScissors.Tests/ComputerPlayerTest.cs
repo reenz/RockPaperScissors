@@ -4,11 +4,11 @@ using RPS.Lib;
 namespace RPS.Lib.Tests
 {
     [TestFixture]
-    public class PlayerTests
+    public class ComputerPlayerTests
     {
 
         [Test]
-        public void ShouldReturnMove()
+        public void ShouldReturnComputerPlayerName()
         {   
             var name = "COMPUTER";
             var player = new ComputerPlayer(name);
