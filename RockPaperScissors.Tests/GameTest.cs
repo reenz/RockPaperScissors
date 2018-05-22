@@ -1,8 +1,8 @@
 using System;
 using NUnit.Framework;
-using Game.Lib;
+using RPS.Lib;
 
-namespace Game.Lib.Tests
+namespace RPS.Lib.Tests
 {
     [TestFixture]
     public class GameTests
@@ -11,9 +11,11 @@ namespace Game.Lib.Tests
         [Test]
         public void ShouldReturnMove()
         {   
-            var game = new Game();
+            var playerOne = new Player("HUMAN");
+            var playerTwo = new Player("COMPUTER");
+            var game = new Game(playerOne, playerTwo, 3);
             var result = game.Play();
-            Assert.AreEqual(result, "Rock");
+            Assert.AreEqual(result, playerOne);
         }
     }
 }
