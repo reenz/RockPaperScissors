@@ -27,6 +27,7 @@ choice ​ , ​ e.g. if it played Scissors in game 2, it should play Rock in ga
 * To complete this task I will make one test project, one class lib project and one console app project.
 * To gain familarity with testing in C# first I wrote very basic test that will just check if "Rock" is returned.
 * Console app will be responsible for interaction from the commandline and Classlib app will have the logic of the game.
+* To mock the console app for testing I used `Moq`. While mocking the ConsoleApp I discovered that I cannot mock non-virtual methods and sealed classes, this [stackoverflow](https://stackoverflow.com/questions/21768767/why-am-i-getting-an-exception-with-the-message-invalid-setup-on-a-non-virtual) post helped me get out of this situation. Then I made IUserInterface in classLib app which is extended in console app to test console app. By making IUserInterface in classLib app will give me the flexibility of adding other types of user interfaces.
 
 ### Extensions
 
