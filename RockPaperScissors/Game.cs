@@ -5,9 +5,9 @@ namespace RPS.Lib
 {
     public class Game
     {
-        private Player playerOne;
+        private IPlayer playerOne;
 
-        private Player playerTwo;
+        private IPlayer playerTwo;
 
         private int playerOneScore;
 
@@ -26,7 +26,7 @@ namespace RPS.Lib
             return rules;
         }
 
-        public Game(Player playerOne, Player playerTwo, int bestOf)
+        public Game(IPlayer playerOne, IPlayer playerTwo, int bestOf)
         {
             this.playerOne = playerOne;
             this.playerTwo = playerTwo;
@@ -43,9 +43,11 @@ namespace RPS.Lib
         }
 
         private void PlayOneTurn()
-        {
+        {  
             var move1 = this.playerOne.Move();
+            Console.WriteLine($"PlayerOne's move {move1} ");
             var move2 = this.playerTwo.Move();
+            Console.WriteLine($"PlayerTwo's move {move2} ");
             var beats = rules[move1];
             if (move1 == move2)
             {

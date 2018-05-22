@@ -29,16 +29,6 @@ namespace RPS.App.Tests
             var result = game.GetPlayer();
             Assert.AreEqual("COMPUTER", result.Name());
         }
-
-        [Test]
-        public void ShouldReturnTypeOfPlayerTactical_Computer()
-        {   
-            var mockUI = new Mock<IUserInterface>();
-            mockUI.Setup(o => o.GetFromUser()).Returns("TACTICAL_COMPUTER");
-            var game = new ConsoleGame(mockUI.Object);
-            var result = game.GetPlayer();
-            Assert.AreEqual("TACTICAL_COMPUTER", result.Name());
-        }
     }
 
 }

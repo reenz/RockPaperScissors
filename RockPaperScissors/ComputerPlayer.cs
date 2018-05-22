@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace RPS.Lib
 {
-    public class Player
+    public class ComputerPlayer : IPlayer
     {
         private string name;
 
-        public Player(string name)
+        public ComputerPlayer(string name)
         {
             this.name = name;
         }

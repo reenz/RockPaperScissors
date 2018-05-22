@@ -32,18 +32,16 @@ namespace RPS.App
 
         }
 
-        public Player GetPlayer()
+        public IPlayer GetPlayer()
         {
-            ui.ShowToUser("Please enter type of player (human, computer, tactical_computer): ");
+            ui.ShowToUser("Please enter type of player (human, computer): ");
             var playerType = ui.GetFromUser();
             switch (playerType)
             {
                 case "HUMAN":
-                    return new Player(playerType);
+                    return new HumanPlayer(playerType);
                 case "COMPUTER":
-                    return new Player(playerType);
-                case "TACTICAL_COMPUTER":
-                    return new Player(playerType);
+                    return new ComputerPlayer(playerType);
                 default:
                     throw new ArgumentException("Invalid player type: " + playerType);
             }

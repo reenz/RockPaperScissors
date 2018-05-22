@@ -11,7 +11,7 @@ namespace RPS.Lib.Tests
         public void ShouldReturnMove()
         {   
             var name = "COMPUTER";
-            var player = new Player(name);
+            var player = new ComputerPlayer(name);
             var result = player.Name();
             Assert.AreEqual(result, "COMPUTER");
         }
