@@ -32,6 +32,13 @@ choice ​ , ​ e.g. if it played Scissors in game 2, it should play Rock in ga
 ### Console Screenshot
 ![RPS](./Images/RPS.png)
 
+### How to use
+* `git clone git@github.com:reenz/RockPaperScissors.git`
+* `dotnet build` to build the project
+* `dotnet restore` to restore the project
+* `dotnet test` to run the tests
+* `cd RockPaperScissorsApp` and run `dotnet run` to run the app then it will ask for type of players and moves.
+
 ### Areas for development
 
 * If I had more time I would have added tactical computer player class to always select the ​ choice that would have beaten its last.
