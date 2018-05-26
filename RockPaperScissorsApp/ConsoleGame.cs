@@ -9,7 +9,7 @@ namespace RPS.App
 
         private IUserInterface ui;
 
-         public ConsoleGame(IUserInterface ui)
+        public ConsoleGame(IUserInterface ui)
         {
             this.ui = ui;
         }
@@ -34,7 +34,7 @@ namespace RPS.App
 
         public IPlayer GetPlayer()
         {
-            ui.ShowToUser("Please enter type of player (human, computer): ");
+            ui.ShowToUser("Please enter type of player (human, computer,tactical-computer): ");
             var playerType = ui.GetFromUser();
             switch (playerType)
             {
@@ -42,6 +42,8 @@ namespace RPS.App
                     return new HumanPlayer(playerType, ui);
                 case "COMPUTER":
                     return new ComputerPlayer(playerType);
+                case "TACTICAL-COMPUTER":
+                    return new TacticalComputerPlayer(playerType);
                 default:
                     throw new ArgumentException("Invalid player type: " + playerType);
             }

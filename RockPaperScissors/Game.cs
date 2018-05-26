@@ -17,7 +17,7 @@ namespace RPS.Lib
 
         private Dictionary<Weapon, List<Weapon>> rules = GetRules();
 
-        private static Dictionary<Weapon, List<Weapon>> GetRules()
+        public static Dictionary<Weapon, List<Weapon>> GetRules()
         {
             //using list as value so that it can be extended to add spoke and lizard
             var rules = new Dictionary<Weapon, List<Weapon>>();
