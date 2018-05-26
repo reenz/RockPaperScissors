@@ -5,7 +5,7 @@ namespace RPS.App
 {
     public class ConsoleGame
     {
-        static int BEST_OF = 3;
+        static int BEST_OF = 5;
 
         private IUserInterface ui;
 
