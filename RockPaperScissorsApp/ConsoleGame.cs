@@ -25,7 +25,7 @@ namespace RPS.App
             ui.ShowToUser("Welcome to our Game\n");
             var playerOne = GetPlayer();
             var playerTwo = GetPlayer();
-            var game = new Game(playerOne, playerTwo, BEST_OF);
+            var game = new Game(playerOne, playerTwo, BEST_OF, ui);
             var outcome = game.Play();
             ui.ShowToUser(outcome.Winner());
             ui.ShowToUser("\nThank you for playing RPS\n");
@@ -39,7 +39,7 @@ namespace RPS.App
             switch (playerType)
             {
                 case "HUMAN":
-                    return new HumanPlayer(playerType);
+                    return new HumanPlayer(playerType, ui);
                 case "COMPUTER":
                     return new ComputerPlayer(playerType);
                 default:
