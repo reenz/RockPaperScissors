@@ -17,7 +17,7 @@ namespace RPS.Lib
         public Weapon Move()
         {
             ui.ShowToUser("Please enter your move(rock, paper, scissors): ");
-            var playerMove = Console.ReadLine().Trim().ToUpper();
+            var playerMove = ui.GetFromUser();
             var move = Enum.Parse(typeof(Weapon), playerMove);
             return (Weapon)move;
         }
