@@ -6,7 +6,7 @@ namespace RPS.Lib
     //created this for testing as Moq cannot mock non-virtual methods and sealed classes
     public interface IUserInterface
     {
-        String GetFromUser();
+        string GetFromUser();
 
         void ShowToUser(string message);
     }

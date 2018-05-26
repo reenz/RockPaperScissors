@@ -4,10 +4,10 @@ namespace RPS.Lib
 {
     public class Outcome
     {
-        private int playerOneScore;
+        private float playerOneScore;
 
-        private int playerTwoScore;
-        public Outcome(int playerOneScore, int playerTwoScore)
+        private float playerTwoScore;
+        public Outcome(float playerOneScore, float playerTwoScore)
         {
             this.playerOneScore = playerOneScore;
             this.playerTwoScore = playerTwoScore;

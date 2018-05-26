@@ -9,9 +9,9 @@ namespace RPS.Lib
 
         private IPlayer playerTwo;
 
-        private int playerOneScore;
+        private float playerOneScore;
 
-        private int playerTwoScore;
+        private float playerTwoScore;
         private int bestOf;
 
         private Dictionary<Weapon, List<Weapon>> rules = GetRules();
@@ -51,8 +51,8 @@ namespace RPS.Lib
             var beats = rules[move1];
             if (move1 == move2)
             {
-                playerOneScore += 1;
-                playerTwoScore += 1;
+                playerOneScore += 0.5f;
+                playerTwoScore += 0.5f;
             }
             else if (beats.Contains(move2))
             {
