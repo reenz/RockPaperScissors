@@ -17,12 +17,16 @@ namespace RPS.Lib
         {
             if (this.playerOneScore > this.playerTwoScore)
             {
-                return "Player One Wins";
+                return $"Player One Wins with {this.playerOneScore} points : beating 2nd by {this.playerTwoScore} points";
             }
-            else
+            else if (this.playerOneScore == this.playerTwoScore)
             {
-                return "Player Two Wins";
+                return "Its a draw";
             }
+            {
+                return $"Player Two Wins with {this.playerTwoScore} points : beating 1st by {this.playerOneScore} points";
+            }
+
 
         }
     }

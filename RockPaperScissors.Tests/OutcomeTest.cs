@@ -15,7 +15,7 @@ namespace RPS.Lib.Tests
             var playerTwoScore = 1;
             var outcome= new Outcome(playerOneScore, playerTwoScore);
             var result = outcome.Winner();
-            Assert.AreEqual(result,"Player One Wins");
+            Assert.AreEqual(result,"Player One Wins with 2 points : beating 2nd by 1 points");
         }
 
         [Test]
@@ -25,7 +25,7 @@ namespace RPS.Lib.Tests
             var playerTwoScore = 2;
             var outcome= new Outcome(playerOneScore, playerTwoScore);
             var result = outcome.Winner();
-            Assert.AreEqual(result,"Player Two Wins");
+            Assert.AreEqual(result,"Player Two Wins with 2 points : beating 1st by 1 points");
         }
     }
 }
