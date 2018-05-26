@@ -4,6 +4,6 @@ namespace RPS.Lib
 {
     public enum Weapon
     {
-        ROCK, PAPER, SCISSORS
+        ROCK, PAPER, SCISSORS, SPOCK, LIZARD 
     }
 }

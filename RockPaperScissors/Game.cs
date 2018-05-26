@@ -21,9 +21,11 @@ namespace RPS.Lib
         {
             //using list as value so that it can be extended to add spoke and lizard
             var rules = new Dictionary<Weapon, List<Weapon>>();
-            rules.Add(Weapon.ROCK, new List<Weapon> { Weapon.SCISSORS });
-            rules.Add(Weapon.PAPER, new List<Weapon> { Weapon.ROCK });
-            rules.Add(Weapon.SCISSORS, new List<Weapon> { Weapon.PAPER });
+            rules.Add(Weapon.ROCK, new List<Weapon> { Weapon.SCISSORS, Weapon.LIZARD });
+            rules.Add(Weapon.PAPER, new List<Weapon> { Weapon.ROCK, Weapon.SPOCK});
+            rules.Add(Weapon.SCISSORS, new List<Weapon> { Weapon.PAPER, Weapon.LIZARD });
+            rules.Add(Weapon.LIZARD, new List<Weapon>{Weapon.SPOCK,Weapon.PAPER});
+            rules.Add(Weapon.SPOCK, new List<Weapon>{Weapon.ROCK, Weapon.SCISSORS});
             return rules;
         }
 
