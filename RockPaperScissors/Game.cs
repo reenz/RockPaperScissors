@@ -13,6 +13,7 @@ namespace RPS.Lib
 
         private float playerTwoScore;
         private int bestOf;
+        private IUserInterface ui;
 
         private Dictionary<Weapon, List<Weapon>> rules = GetRules();
 
@@ -26,16 +27,17 @@ namespace RPS.Lib
             return rules;
         }
 
-        public Game(IPlayer playerOne, IPlayer playerTwo, int bestOf)
+        public Game(IPlayer playerOne, IPlayer playerTwo, int bestOf, IUserInterface ui)
         {
             this.playerOne = playerOne;
             this.playerTwo = playerTwo;
             this.bestOf = bestOf;
+            this.ui = ui;
         }
 
         public Outcome Play()
         {
-            for(int i = 0; i < bestOf; i++)
+            for (int i = 0; i < bestOf; i++)
             {
                 this.PlayOneTurn();
             }
@@ -43,11 +45,11 @@ namespace RPS.Lib
         }
 
         private void PlayOneTurn()
-        {  
+        {
             var move1 = this.playerOne.Move();
-            Console.WriteLine($"PlayerOne's move {move1} ");
+            ui.ShowToUser($"PlayerOne's move {move1} ");
             var move2 = this.playerTwo.Move();
-            Console.WriteLine($"PlayerTwo's move {move2} ");
+            ui.ShowToUser($"PlayerTwo's move {move2} ");
             var beats = rules[move1];
             if (move1 == move2)
             {

@@ -7,17 +7,19 @@ namespace RPS.Lib
     {
         private string name;
 
-        public HumanPlayer(string name)
+        private IUserInterface ui;
+
+        public HumanPlayer(string name, IUserInterface ui)
         {
             this.name = name;
+            this.ui = ui;
         }
-
         public Weapon Move()
         {
-           Console.Write("Please enter your move(rock, paper, scissors): ") ;
-           var playerMove = Console.ReadLine().Trim().ToUpper();
-           var move = Enum.Parse(typeof(Weapon), playerMove);
-           return (Weapon)move;
+            ui.ShowToUser("Please enter your move(rock, paper, scissors): ");
+            var playerMove = Console.ReadLine().Trim().ToUpper();
+            var move = Enum.Parse(typeof(Weapon), playerMove);
+            return (Weapon)move;
         }
 
         public string Name()
