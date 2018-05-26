@@ -49,9 +49,9 @@ namespace RPS.Lib
         private void PlayOneTurn()
         {
             var move1 = this.playerOne.Move();
-            ui.ShowToUser($"PlayerOne's move {move1} ");
+            ui.ShowToUser($"PlayerOne's move {move1}\n ");
             var move2 = this.playerTwo.Move();
-            ui.ShowToUser($"PlayerTwo's move {move2} ");
+            ui.ShowToUser($"PlayerTwo's move {move2}\n ");
             var beats = rules[move1];
             if (move1 == move2)
             {
